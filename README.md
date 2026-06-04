@@ -15,3 +15,5 @@
 ## Accès aux exercices 
  
 Chaque sous-dossier contient les fichiers HTML du TP correspondant.
+<a href="https://ulysseferlindacosta-glitch.github.io/cours-html-css/TP1_HTML">TP1_HTML</a>
+<a href="https://ulysseferlindacosta-glitch.github.io/cours-html-css/TP2_HTML">TP2_HTML</a>
