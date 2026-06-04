@@ -1,8 +1,8 @@
 # cours-html-css
-**Étudiant(e) :** Aminata Diallo 
+**Étudiant(e) :** MAGANAGA DACOSTA Ulysse Ferlin
 **Filière :** L1 Informatique 
 **Université :** SUP’INFO Dakar 
-**Année universitaire :** 2024-2025 
+**Année universitaire :** 2025-2026
  
 ## Contenu du dépôt 
  
