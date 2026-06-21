@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - TP3 Formulaires</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/index.html">Demande d'admission</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/connection.html">Formulaire de Connection</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/identit%C3%A9.html">Formulaire d'Identité</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/recherche.html">Formulaire de Recherche</a></li>
+    </ul>
+
+    <h1>Formulaire de Commande</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <!-- Section Votre commande -->
+        <fieldset>
+            <legend>Votre commande</legend>
+
+            <br>
+            <label for="produit">Produit :</label><br>
+            <select id="produit" name="produit" required>
+                <option value="">-- Sélectionnez un produit --</option>
+                <option value="ordinateur">Ordinateur portable</option>
+                <option value="souris">Souris</option>
+                <option value="clavier">Clavier</option>
+                <option value="webcam">Webcam</option>
+                <option value="casque">Casque</option>
+            </select>
+            <br>
+
+            <br>
+            <label for="quantite">Quantité :</label><br>
+            <input type="number" id="quantite" name="quantite" min="1" max="10" value="1" required>
+            <br>
+
+            <label for="couleur">Couleur préférée du produit :</label><br>
+            <input type="color" id="couleur" name="couleur" value="#000000">
+
+            <br>
+            <label for="date_livraison">Date de livraison souhaitée :</label><br>
+            <input type="date" id="date_livraison" name="date_livraison" min="2026-06-20" required>
+
+            <br>
+            <label for="heure_livraison">Heure de livraison :</label><br>
+            <input type="time" id="heure_livraison" name="heure_livraison" min="08:00" max="18:00" step="1800" required>
+
+        </fieldset>
+
+        <!-- Section Livraison -->
+        <fieldset>
+            <legend>Livraison</legend>
+
+
+            <label>Mode de livraison :</label><br>
+            <input type="radio" id="domicile" name="mode_livraison" value="domicile" required>
+            <label for="domicile">Domicile</label><br>
+
+            <input type="radio" id="point_relais" name="mode_livraison" value="point_relais">
+            <label for="point_relais">Point relais</label><br>
+
+            <input type="radio" id="magasin" name="mode_livraison" value="magasin">
+            <label for="magasin">Retrait en magasin</label>
+            <br>
+
+            <label for="adresse">Adresse complète :</label><br>
+            <textarea id="adresse" name="adresse" rows="3" required></textarea>
+
+            <br>
+            <label for="code_postal">Code postal :</label><br>
+            <input type="text" id="code_postal" name="code_postal" pattern="[0-9]{5}"
+                title="Le code postal doit contenir 5 chiffres" required>
+            <br>
+
+            <label for="ville_livraison">Ville :</label><br>
+            <input type="text" id="ville_livraison" name="ville_livraison" list="villes_livraison">
+            <datalist id="villes_livraison">
+                <option value="Dakar">
+                <option value="Thiès">
+                <option value="Saint-Louis">
+                <option value="Touba">
+                <option value="Kaolack">
+            </datalist>
+
+        </fieldset>
+
+        <!-- Section Paiement -->
+        <fieldset>
+            <legend>Paiement</legend>
+
+
+            <label for="paiement">Moyen de paiement :</label><br>
+            <select id="paiement" name="paiement" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="carte">Carte bancaire</option>
+                <option value="wave">Wave</option>
+                <option value="orange">Orange Money</option>
+                <option value="paypal">PayPal</option>
+                <option value="virement">Virement bancaire</option>
+            </select>
+            <br>
+
+
+            <br>
+            <label for="tel_mobile">Numéro de téléphone mobile money :</label><br>
+            <input type="tel" id="tel_mobile" name="tel_mobile" pattern="[0-9]{9}"
+                title="Entrez 9 chiffres (ex: +221 77 842 80 00)">
+
+            <br>
+
+            <input type="checkbox" id="confirmation" name="confirmation">
+            <label for="confirmation">Je confirme ma commande et accepte les CGV</label>
+            <br>
+
+            <button type="submit">Passer la commande</button>
+</body>
+</html>

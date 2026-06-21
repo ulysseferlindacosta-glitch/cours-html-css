@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche Avancée - TP3 Formulaires</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/index.html">Demande d'admission</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/commande.html">Formulaire de Commande</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/connection.html">Formulaire de Connection</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/identit%C3%A9.html">Formulaire d'Identité</a></li>
+    </ul>
+
+    <h1>Moteur de Recherche - Bibliothèque Universitaire</h1>
+    
+    <form action="#" method="get">
+        
+        <!-- Barre de recherche principale -->
+        <fieldset>
+            <legend>Recherche principale</legend>
+            <br>
+                <label for="recherche">Rechercher :</label><br>
+                <input type="search" id="recherche" name="recherche" 
+                       placeholder="Titre, auteur, mot-clé..." required autofocus>
+            <br>
+            <button type="submit">Rechercher</button>
+        </fieldset>
+
+    <!-- filtre Avance -->
+        <fieldset>
+            <legend>Affiner la recherche</legend>
+            
+                <label>Type de document :</label><br>
+                <input type="checkbox" id="livre" name="type_doc" value="livre">
+                <label for="livre">Livre</label><br>
+                <input type="checkbox" id="article" name="type_doc" value="article">
+                <label for="article">Article</label><br>
+                <input type="checkbox" id="these" name="type_doc" value="these">
+                <label for="these">Thèse</label><br>
+                <input type="checkbox" id="rapport" name="type_doc" value="rapport">
+                <label for="rapport">Rapport</label><br>
+                <input type="checkbox" id="magazine" name="type_doc" value="magazine">
+                <label for="magazine">Magazine</label><br><br>
+
+                <label for="domaine">Domaine :</label><br>
+                <select id="domaine" name="domaine">
+                    <optgroup label="Sciences exactes">
+                        <option value="math">Mathématiques</option>
+                        <option value="phys">Physique</option>
+                    </optgroup>
+                    <optgroup label="Sciences humaines">
+                        <option value="hist">Histoire</option>
+                        <option value="philo">Philosophie</option>
+                    </optgroup>
+                    <optgroup label="Informatique">
+                        <option value="info">Informatique</option>
+                    </optgroup>
+                    <optgroup label="Autres">
+                        <option value="autre">Autres</option>
+                    </optgroup>
+                </select>
+        <br>
+                <label>Année de publication :</label><br>
+                De : <input type="number" name="annee_min" min="1900" max="2025" value="1900">
+                À : <input type="number" name="annee_max" min="1900" max="2025" value="2025">
+        <br>
+                <label for="langues">Langue :</label><br>
+                <select id="langues" name="langue" multiple size="4">
+                    <option value="fr">Français</option>
+                    <option value="en">Anglais</option>
+                    <option value="ar">Arabe</option>
+                    <option value="wo">Wolof</option>
+                </select>
+         <br>
+                <label>Disponibilité :</label><br>
+                <input type="radio" id="tous" name="dispo" value="tous" checked>
+                <label for="tous">Tous les documents</label><br>
+                <input type="radio" id="disponible" name="dispo" value="disponible">
+                <label for="disponible">Disponibles uniquement</label>
+        <br>
+                <label for="resultats">Nombre de résultats par page :</label><br>
+                <select id="resultats" name="resultats">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select><br>
+            
+            <button type="submit">Appliquer les filtres</button>
+            <button type="reset">Réinitialiser</button>
+        </fieldset>
+    </form>
+</body>
+</html>

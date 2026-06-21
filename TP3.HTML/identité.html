@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document d'identité</title>
+</head>
+<body>
+
+     <ul>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/index.html">Demande d'admission</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/commande.html">Formulaire de Commande</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/connection.html">Formulaire de Connection</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/recherche.html">Formulaire de Recherche</a></li>
+    </ul>
+
+    <fieldset>
+    <legend>Section 1 - État civil et identité</legend>
+    
+    
+        <label for="civilite">Civilité :</label><br>
+        <select id="civilite" name="civilite">
+            <option value="">-- Sélectionnez --</option>
+            <option value="M">M.</option>
+            <option value="Mme">Mme</option>
+            <option value="Dr">Dr</option>
+            <option value="Pr">Pr</option>
+        </select>
+        <br><br>
+    
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" name="nom" required maxlength="50">
+    <br>
+    
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" id="prenom" name="prenom" required maxlength="50">
+    <br><br>
+    
+        <label for="sexe">Sexe :</label><br>
+        <input type="radio" id="masculin" name="sexe" value="M">
+        <label for="masculin">Masculin</label><br>
+        <input type="radio" id="feminin" name="sexe" value="F">
+        <label for="feminin">Féminin</label><br><br>
+    
+        <label for="naissance">Date de naissance :</label><br>
+        <input type="date" id="naissance" name="naissance" required>
+    <br><br>
+    
+        <label for="lieu_naissance">Lieu de naissance :</label><br>
+        <input type="text" id="lieu_naissance" name="lieu_naissance">
+    <br><br>
+
+        <label for="nationalite">Nationalité :</label><br>
+        <input type="text" id="nationalite" name="nationalite" list="liste_pays" placeholder="Tapez ou sélectionnez...">
+        <datalist id="liste_pays">
+            <option value="Sénégal">
+            <option value="Mali">
+            <option value="Côte d'Ivoire">
+            <option value="Guinée">
+            <option value="Burkina Faso">
+            <option value="Togo">
+            <option value="Bénin">
+            <option value="Niger">
+        </datalist>
+    <br><br>
+
+        <label for="piece">Numéro de pièce d'identité :</label><br>
+        <input type="text" id="piece" name="piece" 
+               pattern="[0-9]{8}" 
+               title="Le numéro doit contenir 8 chiffres" 
+               required>
+    <br><br>
+    
+        <label for="photo">Photo d'identité :</label><br>
+        <input type="file" id="photo" name="photo" 
+               accept="image/jpeg,image/png" 
+               required>
+</fieldset>
+</body>
+</html>

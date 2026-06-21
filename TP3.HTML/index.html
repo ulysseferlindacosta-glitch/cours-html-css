@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier d'Admission Universitaire - TP3</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/commande.html">Formulaire de Commande</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/connection.html">Formulaire de Connection</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/identit%C3%A9.html">Formulaire d'Identité</a></li>
+        <li><a href="file:///C:/Users/MAGANGA%20DACOSTA/OneDrive/Desktop/work%20hout%20HTML/TP3.HTML/recherche.html">Formulaire de Recherche</a></li>
+    </ul>
+
+    <h1>Demande d'Admission - Université Sup'Info</h1>
+    
+    <form action="#" method="post" enctype="multipart/form-data">
+        
+        <!-- Section 1 : État civil et identité -->
+        <fieldset>
+            <legend>Section 1 - État civil et identité</legend>
+            
+                <label for="civilite">Civilité :</label><br>
+                <select id="civilite" name="civilite">
+                    <option value="M">M.</option>
+                    <option value="Mme">Mme</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Pr">Pr</option>
+                </select>
+            <br>
+
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" name="nom" required>
+            <br>   
+                <label for="prenom">Prénom :</label><br>
+                <input type="text" id="prenom" name="prenom" required>
+            <br>
+                <label for="naissance">Date de naissance :</label><br>
+                <input type="date" id="naissance" name="naissance" required>
+            <br>
+                <label for="lieu_naissance">Lieu de naissance :</label><br>
+                <input type="text" id="lieu_naissance" name="lieu_naissance">
+            <br>
+                <label for="nationalite">Nationalité :</label><br>
+                <input type="text" id="nationalite" name="nationalite" list="pays">
+                <datalist id="pays">
+                    <option value="Sénégal">
+                    <option value="Mali">
+                    <option value="Côte d'Ivoire">
+                    <option value="Guinée">
+                    <option value="Burkina Faso">
+                    <option value="Togo">
+                    <option value="Bénin">
+                    <option value="Niger">
+                </datalist>
+            <br>
+                <label for="piece">Numéro de pièce d'identité :</label><br>
+                <input type="text" id="piece" name="piece" pattern="[0-9]{8}" title="8 chiffres" required>
+            <br>
+                <label for="photo">Photo d'identité :</label><br>
+                <input type="file" id="photo" name="photo" accept="image/jpeg,image/png" required>
+            <br>
+
+        <!-- Section 2 : Coordonnées -->
+        <fieldset>
+            <legend>Section 2 - Coordonnées</legend>
+            
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email" required>
+            <br>
+                <label for="email_confirm">Confirmation Email :</label><br>
+                <input type="email" id="email_confirm" name="email_confirm" required>
+            <br>
+                <label for="tel1">Téléphone principal :</label><br>
+                <input type="tel" id="tel1" name="tel1" pattern="[0-9]{9}" title="9 chiffres" required>
+            <br>
+                <label for="tel2">Téléphone secondaire :</label><br>
+                <input type="tel" id="tel2" name="tel2" pattern="[0-9]{9}">
+            <br>
+                <label for="adresse">Adresse postale complète :</label><br>
+                <textarea id="adresse" name="adresse" rows="4"></textarea>
+            <br>
+                <label for="region">Région :</label><br>
+                <select id="region" name="region">
+                    <option value="Dakar">Dakar</option>
+                    <option value="Thiès">Thiès</option>
+                    <option value="Saint-Louis">Saint-Louis</option>
+                    <option value="Touba">Touba</option>
+                </select>
+            
+        </fieldset>
+
+        <!-- Section 3 : Cursus académique -->
+         <fieldset>
+            <legend>Section 3 - Cursus académique</legend>
+            <br>
+                <label for="diplome">Diplôme obtenu :</label><br>
+                <select id="diplome" name="diplome">
+                    <option value="bfem">BFEM</option>
+                    <option value="bac">BAC</option>
+                    <option value="licence">Licence</option>
+                    <option value="master">Master</option>
+                </select>
+            <br>
+                <label>Mention :</label><br>
+                <input type="radio" id="passable" name="mention" value="passable">
+                <label for="passable">Passable</label>
+                <input type="radio" id="assez_bien" name="mention" value="assez_bien">
+                <label for="assez_bien">Assez Bien</label>
+                <input type="radio" id="bien" name="mention" value="bien">
+                <label for="bien">Bien</label>
+                <input type="radio" id="tres_bien" name="mention" value="tres_bien">
+                <label for="tres_bien">Très Bien</label>
+
+                <!-- Autres mentions à ajouter de la même façon -->
+            <br>
+                <label for="annee_obtention">Année d'obtention :</label><br>
+                <input type="number" id="annee_obtention" name="annee_obtention" min="2000" max="2025">
+            <br>
+                <label for="etablissement">Établissement d'origine :</label><br>
+                <input type="text" id="etablissement" name="etablissement" required>
+            <br>
+                <label for="releve">Relevé de notes :</label><br>
+                <input type="file" id="releve" name="releve" accept=".pdf" required>
+            
+        </fieldset>
+
+        <!-- Section 4 : Formation souhaitée -->
+        <fieldset>
+            <legend>Section 4 - Formation souhaitée</legend>
+            <br>
+                <label for="filiere1">Filière 1er choix :</label><br>
+                <select id="filiere1" name="filiere1">
+                    <option value="Informatique">Informatique</option>
+                    <option value="Gestion">Gestion</option>
+                    <option value="Sciences">Sciences</option>
+                    <option value="Lettres">Lettres</option>
+                </select>
+            <br>
+
+            <br>
+                <label for="filiere2">Filière 2ème choix :</label><br>
+                <select id="filiere2" name="filiere2">
+                    <option value="Informatique">Informatique</option>
+                    <option value="Gestion">Gestion</option>
+                    <option value="Sciences">Sciences</option>
+                    <option value="Lettres">Lettres</option>
+                </select>
+            <br><br>
+
+                <label>Régime d'études :</label><br>
+                <input type="radio" id="presentiel" name="regime" value="presentiel">
+                <label for="presentiel">Présentiel</label>
+                <input type="radio" id="distanciel" name="regime" value="distanciel">
+                <label for="distanciel">Distanciel</label>
+                <input type="radio" id="hybride" name="regime" value="hybride">
+                <label for="hybride">Hybride</label>
+        </fieldset>
+
+        <!-- Section 5 et 6 : Motivation et Déclaration -->
+        <fieldset>
+            <legend>Section 5 et 6 - Motivation et Déclaration</legend>
+            <br>
+                <label for="lettre">Lettre de motivation :</label><br>
+                <textarea id="lettre" name="lettre" rows="8" minlength="200" maxlength="2000" required></textarea>
+            <br>
+               <label for="Comment avez-vous connu notre université">Comment avez-vous connu notre université ?</label><br>
+                <select id="filiere2" name="filiere2">
+                    <option value="Selo les étudiants">Selo les étudiants</option>
+                    <option value="Recommandation">Recommandation</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Autre">Autre</option>
+                </select> <br><br>
+            
+                 <label for="Document joint complémentaire">Document joint complémentaire :</label>
+                <input type="file" id="document_complementaire" name="document_complementaire" accept=".pdf" required> <br><br>
+
+                <input type="checkbox" id="certif" name="certif" required>
+                <label for="certif">Je certifie l'exactitude des informations fournies</label>
+            <br>
+                <input type="checkbox" id="confidentialite" name="confidentialite" required>
+                <label for="confidentialite">J'accepte la politique de confidentialité</label> <br><br>
+            <input type="hidden" name="annee_candidature" value="2025">
+            
+            <button type="submit">Soumettre ma candidature</button>
+            <button type="reset">Réinitialiser</button>
+        </fieldset>
+    </form>
+    
+    <p><strong>⚠ Vérifiez vos informations avant de soumettre. Toute fausse déclaration entraîne l'annulation de la candidature.</strong></p>
+</body>
+</html>
